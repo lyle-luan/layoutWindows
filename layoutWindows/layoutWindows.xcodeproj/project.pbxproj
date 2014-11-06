@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD9220E91A0B214900F33BDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9220E81A0B214900F33BDC /* AppDelegate.m */; };
+		DD9220EB1A0B214900F33BDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9220EA1A0B214900F33BDC /* main.m */; };
+		DD9220EE1A0B214900F33BDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9220ED1A0B214900F33BDC /* ViewController.m */; };
+		DD9220F01A0B214900F33BDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9220EF1A0B214900F33BDC /* Images.xcassets */; };
+		DD9220F31A0B214900F33BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9220F11A0B214900F33BDC /* Main.storyboard */; };
+		DD9220FF1A0B214900F33BDC /* layoutWindowsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9220FE1A0B214900F33BDC /* layoutWindowsTests.m */; };
+		DD92210A1A0B233B00F33BDC /* HotKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221091A0B233B00F33BDC /* HotKeyManager.m */; };
+		DD92210D1A0B25DF00F33BDC /* WindowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD92210C1A0B25DF00F33BDC /* WindowsManager.m */; };
+		DD9221111A0B2E6100F33BDC /* WindowStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221101A0B2E6100F33BDC /* WindowStateItem.m */; };
+		DD9221141A0B2F1700F33BDC /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9221131A0B2F1700F33BDC /* AppKit.framework */; };
+		DD9221171A0B325E00F33BDC /* WindowStateItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221161A0B325E00F33BDC /* WindowStateItemManager.m */; };
+		DD92211A1A0B586600F33BDC /* WindowsPositionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221191A0B586600F33BDC /* WindowsPositionManager.m */; };
+		DD92211D1A0B592D00F33BDC /* StatusItemOnPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD92211C1A0B592D00F33BDC /* StatusItemOnPanelController.m */; };
+		DD92212A1A0B639000F33BDC /* osax.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221291A0B639000F33BDC /* osax.m */; };
+		DD92212C1A0B63B600F33BDC /* layoutWindowsOSAX.sdef in Resources */ = {isa = PBXBuildFile; fileRef = DD92212B1A0B63B600F33BDC /* layoutWindowsOSAX.sdef */; };
+		DD9221311A0B675600F33BDC /* HotKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221091A0B233B00F33BDC /* HotKeyManager.m */; };
+		DD9221321A0B676E00F33BDC /* WindowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD92210C1A0B25DF00F33BDC /* WindowsManager.m */; };
+		DD9221331A0B678400F33BDC /* WindowStateItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221161A0B325E00F33BDC /* WindowStateItemManager.m */; };
+		DD9221341A0B678400F33BDC /* WindowsPositionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221191A0B586600F33BDC /* WindowsPositionManager.m */; };
+		DD9221351A0B679000F33BDC /* WindowStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221101A0B2E6100F33BDC /* WindowStateItem.m */; };
+		DD9221371A0B692500F33BDC /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9221361A0B692500F33BDC /* ScriptingBridge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD9220F91A0B214900F33BDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9220DA1A0B214900F33BDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9220E11A0B214900F33BDC;
+			remoteInfo = layoutWindows;
+		};
+		DD92212D1A0B657B00F33BDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9220DA1A0B214900F33BDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9221211A0B624F00F33BDC;
+			remoteInfo = layoutWindowsOSAX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD9220E21A0B214900F33BDC /* layoutWindows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layoutWindows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9220E61A0B214900F33BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9220E71A0B214900F33BDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD9220E81A0B214900F33BDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD9220EA1A0B214900F33BDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD9220EC1A0B214900F33BDC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DD9220ED1A0B214900F33BDC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD9220EF1A0B214900F33BDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DD9220F21A0B214900F33BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD9220F81A0B214900F33BDC /* layoutWindowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = layoutWindowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9220FD1A0B214900F33BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9220FE1A0B214900F33BDC /* layoutWindowsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = layoutWindowsTests.m; sourceTree = "<group>"; };
+		DD9221081A0B233B00F33BDC /* HotKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKeyManager.h; sourceTree = "<group>"; };
+		DD9221091A0B233B00F33BDC /* HotKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKeyManager.m; sourceTree = "<group>"; };
+		DD92210B1A0B25DF00F33BDC /* WindowsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowsManager.h; sourceTree = "<group>"; };
+		DD92210C1A0B25DF00F33BDC /* WindowsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowsManager.m; sourceTree = "<group>"; };
+		DD92210F1A0B2E6100F33BDC /* WindowStateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowStateItem.h; sourceTree = "<group>"; };
+		DD9221101A0B2E6100F33BDC /* WindowStateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowStateItem.m; sourceTree = "<group>"; };
+		DD9221131A0B2F1700F33BDC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DD9221151A0B325E00F33BDC /* WindowStateItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowStateItemManager.h; sourceTree = "<group>"; };
+		DD9221161A0B325E00F33BDC /* WindowStateItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowStateItemManager.m; sourceTree = "<group>"; };
+		DD9221181A0B586600F33BDC /* WindowsPositionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowsPositionManager.h; sourceTree = "<group>"; };
+		DD9221191A0B586600F33BDC /* WindowsPositionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowsPositionManager.m; sourceTree = "<group>"; };
+		DD92211B1A0B592D00F33BDC /* StatusItemOnPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemOnPanelController.h; sourceTree = "<group>"; };
+		DD92211C1A0B592D00F33BDC /* StatusItemOnPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemOnPanelController.m; sourceTree = "<group>"; };
+		DD9221221A0B624F00F33BDC /* layoutWindowsOSAX.osax */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = layoutWindowsOSAX.osax; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9221251A0B624F00F33BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9221291A0B639000F33BDC /* osax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = osax.m; sourceTree = "<group>"; };
+		DD92212B1A0B63B600F33BDC /* layoutWindowsOSAX.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = layoutWindowsOSAX.sdef; sourceTree = "<group>"; };
+		DD9221361A0B692500F33BDC /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD9220DF1A0B214900F33BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9221371A0B692500F33BDC /* ScriptingBridge.framework in Frameworks */,
+				DD9221141A0B2F1700F33BDC /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9220F51A0B214900F33BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD92211F1A0B624F00F33BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD9220D91A0B214900F33BDC = {
+			isa = PBXGroup;
+			children = (
+				DD9220E41A0B214900F33BDC /* layoutWindows */,
+				DD9220FB1A0B214900F33BDC /* layoutWindowsTests */,
+				DD9221231A0B624F00F33BDC /* layoutWindowsOSAX */,
+				DD9221121A0B2EDD00F33BDC /* Frameworks */,
+				DD9220E31A0B214900F33BDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD9220E31A0B214900F33BDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD9220E21A0B214900F33BDC /* layoutWindows.app */,
+				DD9220F81A0B214900F33BDC /* layoutWindowsTests.xctest */,
+				DD9221221A0B624F00F33BDC /* layoutWindowsOSAX.osax */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD9220E41A0B214900F33BDC /* layoutWindows */ = {
+			isa = PBXGroup;
+			children = (
+				DD92210E1A0B2E4700F33BDC /* Model */,
+				DD9220E71A0B214900F33BDC /* AppDelegate.h */,
+				DD9220E81A0B214900F33BDC /* AppDelegate.m */,
+				DD9220EC1A0B214900F33BDC /* ViewController.h */,
+				DD9220ED1A0B214900F33BDC /* ViewController.m */,
+				DD9220EF1A0B214900F33BDC /* Images.xcassets */,
+				DD9220F11A0B214900F33BDC /* Main.storyboard */,
+				DD9220E51A0B214900F33BDC /* Supporting Files */,
+				DD9221081A0B233B00F33BDC /* HotKeyManager.h */,
+				DD9221091A0B233B00F33BDC /* HotKeyManager.m */,
+				DD92210B1A0B25DF00F33BDC /* WindowsManager.h */,
+				DD92210C1A0B25DF00F33BDC /* WindowsManager.m */,
+				DD9221151A0B325E00F33BDC /* WindowStateItemManager.h */,
+				DD9221161A0B325E00F33BDC /* WindowStateItemManager.m */,
+				DD9221181A0B586600F33BDC /* WindowsPositionManager.h */,
+				DD9221191A0B586600F33BDC /* WindowsPositionManager.m */,
+				DD92211B1A0B592D00F33BDC /* StatusItemOnPanelController.h */,
+				DD92211C1A0B592D00F33BDC /* StatusItemOnPanelController.m */,
+			);
+			path = layoutWindows;
+			sourceTree = "<group>";
+		};
+		DD9220E51A0B214900F33BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD9220E61A0B214900F33BDC /* Info.plist */,
+				DD9220EA1A0B214900F33BDC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD9220FB1A0B214900F33BDC /* layoutWindowsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD9220FE1A0B214900F33BDC /* layoutWindowsTests.m */,
+				DD9220FC1A0B214900F33BDC /* Supporting Files */,
+			);
+			path = layoutWindowsTests;
+			sourceTree = "<group>";
+		};
+		DD9220FC1A0B214900F33BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD9220FD1A0B214900F33BDC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD92210E1A0B2E4700F33BDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD92210F1A0B2E6100F33BDC /* WindowStateItem.h */,
+				DD9221101A0B2E6100F33BDC /* WindowStateItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DD9221121A0B2EDD00F33BDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD9221361A0B692500F33BDC /* ScriptingBridge.framework */,
+				DD9221131A0B2F1700F33BDC /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD9221231A0B624F00F33BDC /* layoutWindowsOSAX */ = {
+			isa = PBXGroup;
+			children = (
+				DD9221291A0B639000F33BDC /* osax.m */,
+				DD9221241A0B624F00F33BDC /* Supporting Files */,
+			);
+			path = layoutWindowsOSAX;
+			sourceTree = "<group>";
+		};
+		DD9221241A0B624F00F33BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD9221251A0B624F00F33BDC /* Info.plist */,
+				DD92212B1A0B63B600F33BDC /* layoutWindowsOSAX.sdef */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD9220E11A0B214900F33BDC /* layoutWindows */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9221021A0B214900F33BDC /* Build configuration list for PBXNativeTarget "layoutWindows" */;
+			buildPhases = (
+				DD9220DE1A0B214900F33BDC /* Sources */,
+				DD9220DF1A0B214900F33BDC /* Frameworks */,
+				DD9220E01A0B214900F33BDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD92212E1A0B657B00F33BDC /* PBXTargetDependency */,
+			);
+			name = layoutWindows;
+			productName = layoutWindows;
+			productReference = DD9220E21A0B214900F33BDC /* layoutWindows.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD9220F71A0B214900F33BDC /* layoutWindowsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9221051A0B214900F33BDC /* Build configuration list for PBXNativeTarget "layoutWindowsTests" */;
+			buildPhases = (
+				DD9220F41A0B214900F33BDC /* Sources */,
+				DD9220F51A0B214900F33BDC /* Frameworks */,
+				DD9220F61A0B214900F33BDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD9220FA1A0B214900F33BDC /* PBXTargetDependency */,
+			);
+			name = layoutWindowsTests;
+			productName = layoutWindowsTests;
+			productReference = DD9220F81A0B214900F33BDC /* layoutWindowsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD9221211A0B624F00F33BDC /* layoutWindowsOSAX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9221261A0B624F00F33BDC /* Build configuration list for PBXNativeTarget "layoutWindowsOSAX" */;
+			buildPhases = (
+				DD92211E1A0B624F00F33BDC /* Sources */,
+				DD92211F1A0B624F00F33BDC /* Frameworks */,
+				DD9221201A0B624F00F33BDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = layoutWindowsOSAX;
+			productName = layoutWindowsOSAX;
+			productReference = DD9221221A0B624F00F33BDC /* layoutWindowsOSAX.osax */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD9220DA1A0B214900F33BDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = lyle;
+				TargetAttributes = {
+					DD9220E11A0B214900F33BDC = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					DD9220F71A0B214900F33BDC = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = DD9220E11A0B214900F33BDC;
+					};
+					DD9221211A0B624F00F33BDC = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = DD9220DD1A0B214900F33BDC /* Build configuration list for PBXProject "layoutWindows" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD9220D91A0B214900F33BDC;
+			productRefGroup = DD9220E31A0B214900F33BDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD9220E11A0B214900F33BDC /* layoutWindows */,
+				DD9220F71A0B214900F33BDC /* layoutWindowsTests */,
+				DD9221211A0B624F00F33BDC /* layoutWindowsOSAX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD9220E01A0B214900F33BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9220F01A0B214900F33BDC /* Images.xcassets in Resources */,
+				DD9220F31A0B214900F33BDC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9220F61A0B214900F33BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9221201A0B624F00F33BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD92212C1A0B63B600F33BDC /* layoutWindowsOSAX.sdef in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD9220DE1A0B214900F33BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9221171A0B325E00F33BDC /* WindowStateItemManager.m in Sources */,
+				DD92210D1A0B25DF00F33BDC /* WindowsManager.m in Sources */,
+				DD9220EE1A0B214900F33BDC /* ViewController.m in Sources */,
+				DD9221111A0B2E6100F33BDC /* WindowStateItem.m in Sources */,
+				DD92210A1A0B233B00F33BDC /* HotKeyManager.m in Sources */,
+				DD9220EB1A0B214900F33BDC /* main.m in Sources */,
+				DD92211D1A0B592D00F33BDC /* StatusItemOnPanelController.m in Sources */,
+				DD92211A1A0B586600F33BDC /* WindowsPositionManager.m in Sources */,
+				DD9220E91A0B214900F33BDC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9220F41A0B214900F33BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9220FF1A0B214900F33BDC /* layoutWindowsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD92211E1A0B624F00F33BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9221351A0B679000F33BDC /* WindowStateItem.m in Sources */,
+				DD9221331A0B678400F33BDC /* WindowStateItemManager.m in Sources */,
+				DD9221341A0B678400F33BDC /* WindowsPositionManager.m in Sources */,
+				DD9221321A0B676E00F33BDC /* WindowsManager.m in Sources */,
+				DD9221311A0B675600F33BDC /* HotKeyManager.m in Sources */,
+				DD92212A1A0B639000F33BDC /* osax.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD9220FA1A0B214900F33BDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9220E11A0B214900F33BDC /* layoutWindows */;
+			targetProxy = DD9220F91A0B214900F33BDC /* PBXContainerItemProxy */;
+		};
+		DD92212E1A0B657B00F33BDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9221211A0B624F00F33BDC /* layoutWindowsOSAX */;
+			targetProxy = DD92212D1A0B657B00F33BDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD9220F11A0B214900F33BDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD9220F21A0B214900F33BDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD9221001A0B214900F33BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DD9221011A0B214900F33BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DD9221031A0B214900F33BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = layoutWindows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD9221041A0B214900F33BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = layoutWindows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD9221061A0B214900F33BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = layoutWindowsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/layoutWindows.app/Contents/MacOS/layoutWindows";
+			};
+			name = Debug;
+		};
+		DD9221071A0B214900F33BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = layoutWindowsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/layoutWindows.app/Contents/MacOS/layoutWindows";
+			};
+			name = Release;
+		};
+		DD9221271A0B624F00F33BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = layoutWindowsOSAX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = osax;
+			};
+			name = Debug;
+		};
+		DD9221281A0B624F00F33BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = layoutWindowsOSAX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = osax;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD9220DD1A0B214900F33BDC /* Build configuration list for PBXProject "layoutWindows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9221001A0B214900F33BDC /* Debug */,
+				DD9221011A0B214900F33BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD9221021A0B214900F33BDC /* Build configuration list for PBXNativeTarget "layoutWindows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9221031A0B214900F33BDC /* Debug */,
+				DD9221041A0B214900F33BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD9221051A0B214900F33BDC /* Build configuration list for PBXNativeTarget "layoutWindowsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9221061A0B214900F33BDC /* Debug */,
+				DD9221071A0B214900F33BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD9221261A0B624F00F33BDC /* Build configuration list for PBXNativeTarget "layoutWindowsOSAX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9221271A0B624F00F33BDC /* Debug */,
+				DD9221281A0B624F00F33BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD9220DA1A0B214900F33BDC /* Project object */;
+}
