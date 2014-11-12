@@ -29,6 +29,7 @@
 		DD9221351A0B679000F33BDC /* WindowStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221101A0B2E6100F33BDC /* WindowStateItem.m */; };
 		DD9221371A0B692500F33BDC /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9221361A0B692500F33BDC /* ScriptingBridge.framework */; };
 		DDE88D771A13552200F0AE27 /* OSAXInstallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE88D761A13552200F0AE27 /* OSAXInstallManager.m */; };
+		DDE88D7A1A13579700F0AE27 /* ScriptingAdditionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE88D791A13579700F0AE27 /* ScriptingAdditionsManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		DD9221361A0B692500F33BDC /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		DDE88D751A13552200F0AE27 /* OSAXInstallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAXInstallManager.h; sourceTree = "<group>"; };
 		DDE88D761A13552200F0AE27 /* OSAXInstallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAXInstallManager.m; sourceTree = "<group>"; };
+		DDE88D781A13579700F0AE27 /* ScriptingAdditionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptingAdditionsManager.h; sourceTree = "<group>"; };
+		DDE88D791A13579700F0AE27 /* ScriptingAdditionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScriptingAdditionsManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,8 @@
 				DD92211C1A0B592D00F33BDC /* StatusItemOnPanelController.m */,
 				DDE88D751A13552200F0AE27 /* OSAXInstallManager.h */,
 				DDE88D761A13552200F0AE27 /* OSAXInstallManager.m */,
+				DDE88D781A13579700F0AE27 /* ScriptingAdditionsManager.h */,
+				DDE88D791A13579700F0AE27 /* ScriptingAdditionsManager.m */,
 			);
 			path = layoutWindows;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				DD9221111A0B2E6100F33BDC /* WindowStateItem.m in Sources */,
 				DDE88D771A13552200F0AE27 /* OSAXInstallManager.m in Sources */,
 				DD92210A1A0B233B00F33BDC /* HotKeyManager.m in Sources */,
+				DDE88D7A1A13579700F0AE27 /* ScriptingAdditionsManager.m in Sources */,
 				DD9220EB1A0B214900F33BDC /* main.m in Sources */,
 				DD92211D1A0B592D00F33BDC /* StatusItemOnPanelController.m in Sources */,
 				DD92211A1A0B586600F33BDC /* WindowsPositionManager.m in Sources */,
