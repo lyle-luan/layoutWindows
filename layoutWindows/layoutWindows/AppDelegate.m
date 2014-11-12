@@ -11,6 +11,7 @@
 #import <Carbon/Carbon.h>
 
 #import "HotKeyManager.h"
+#import "OSAXInstallManager.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +21,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [[[NSWorkspace sharedWorkspace] notificationCenter]
-     addObserver:self selector:@selector(someAppDidEngine:)
-     name:NSWorkspaceDidLaunchApplicationNotification object:nil];
+    [OSAXInstallManager installOSAX];
+    
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(someAppDidEngine:) name:NSWorkspaceDidLaunchApplicationNotification object:nil];
     
 //    [HotKeyManager engineHotKeyListen];
 }

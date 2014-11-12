@@ -28,6 +28,7 @@
 		DD9221341A0B678400F33BDC /* WindowsPositionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221191A0B586600F33BDC /* WindowsPositionManager.m */; };
 		DD9221351A0B679000F33BDC /* WindowStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9221101A0B2E6100F33BDC /* WindowStateItem.m */; };
 		DD9221371A0B692500F33BDC /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9221361A0B692500F33BDC /* ScriptingBridge.framework */; };
+		DDE88D771A13552200F0AE27 /* OSAXInstallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE88D761A13552200F0AE27 /* OSAXInstallManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		DD9221291A0B639000F33BDC /* osax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = osax.m; sourceTree = "<group>"; };
 		DD92212B1A0B63B600F33BDC /* layoutWindowsOSAX.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = layoutWindowsOSAX.sdef; sourceTree = "<group>"; };
 		DD9221361A0B692500F33BDC /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		DDE88D751A13552200F0AE27 /* OSAXInstallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAXInstallManager.h; sourceTree = "<group>"; };
+		DDE88D761A13552200F0AE27 /* OSAXInstallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAXInstallManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				DD9221191A0B586600F33BDC /* WindowsPositionManager.m */,
 				DD92211B1A0B592D00F33BDC /* StatusItemOnPanelController.h */,
 				DD92211C1A0B592D00F33BDC /* StatusItemOnPanelController.m */,
+				DDE88D751A13552200F0AE27 /* OSAXInstallManager.h */,
+				DDE88D761A13552200F0AE27 /* OSAXInstallManager.m */,
 			);
 			path = layoutWindows;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				DD92210D1A0B25DF00F33BDC /* WindowsManager.m in Sources */,
 				DD9220EE1A0B214900F33BDC /* ViewController.m in Sources */,
 				DD9221111A0B2E6100F33BDC /* WindowStateItem.m in Sources */,
+				DDE88D771A13552200F0AE27 /* OSAXInstallManager.m in Sources */,
 				DD92210A1A0B233B00F33BDC /* HotKeyManager.m in Sources */,
 				DD9220EB1A0B214900F33BDC /* main.m in Sources */,
 				DD92211D1A0B592D00F33BDC /* StatusItemOnPanelController.m in Sources */,
@@ -585,6 +591,7 @@
 				DD9221041A0B214900F33BDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD9221051A0B214900F33BDC /* Build configuration list for PBXNativeTarget "layoutWindowsTests" */ = {
 			isa = XCConfigurationList;
@@ -593,6 +600,7 @@
 				DD9221071A0B214900F33BDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD9221261A0B624F00F33BDC /* Build configuration list for PBXNativeTarget "layoutWindowsOSAX" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +609,7 @@
 				DD9221281A0B624F00F33BDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
