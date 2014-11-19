@@ -11,5 +11,6 @@
 @interface ScriptingAdditionsManager : NSObject
 
 - (void)engineScriptingAdditions;
+- (void)offScriptingAdditions;
 
 @end

@@ -27,7 +27,7 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
-    
+    [_scriptingAdditionsManager offScriptingAdditions];
 }
 
 @end

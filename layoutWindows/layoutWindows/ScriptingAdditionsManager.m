@@ -11,22 +11,62 @@
 #import <ScriptingBridge/ScriptingBridge.h>
 #import <Carbon/Carbon.h>
 
+static NSString * const runningApplicationsPropertyOfNSWorkspace = @"runningApplications";
+static NSString * const isFinishedLaunchingPropertyOfNSRunningApplication = @"isFinishedLaunching";
+
 @implementation ScriptingAdditionsManager
 
 - (void)engineScriptingAdditions
 {
-    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(someAppDidEngine:) name:NSWorkspaceDidLaunchApplicationNotification object:nil];
+    [[NSWorkspace sharedWorkspace] addObserver:self forKeyPath:runningApplicationsPropertyOfNSWorkspace options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
 }
 
-- (void) someAppDidEngine:(NSNotification*)notification
+- (void)offScriptingAdditions
 {
-    NSDictionary* appInfo = [notification userInfo];
-    
-    pid_t pid = [[appInfo objectForKey:@"NSApplicationProcessIdentifier"] intValue];
-    SBApplication *app = [SBApplication applicationWithProcessIdentifier:pid];
+    [[NSWorkspace sharedWorkspace] removeObserver:self forKeyPath:runningApplicationsPropertyOfNSWorkspace];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:runningApplicationsPropertyOfNSWorkspace] == YES)
+    {
+        NSArray *newRunningApps = [change objectForKey:NSKeyValueChangeNewKey];
+        for (NSRunningApplication *runningApp in newRunningApps)
+        {
+            if (runningApp.isFinishedLaunching == YES)
+            {
+                [self injectApp:runningApp];
+            }
+            else
+            {
+                [runningApp addObserver:self forKeyPath:isFinishedLaunchingPropertyOfNSRunningApplication options:NSKeyValueObservingOptionNew context:nil];
+            }
+        }
+        
+        NSArray *oldRunningApps = [change objectForKey:NSKeyValueChangeOldKey];
+        for (NSRunningApplication *runningApp in oldRunningApps)
+        {
+            if (runningApp.isFinishedLaunching == YES)
+            {
+                [self injectApp:runningApp];
+            }
+        }
+    }
+    else if([keyPath isEqualToString:isFinishedLaunchingPropertyOfNSRunningApplication] == YES)
+    {
+        NSRunningApplication *runningApp = (NSRunningApplication *)object;
+        [runningApp removeObserver:self forKeyPath:isFinishedLaunchingPropertyOfNSRunningApplication];
+        [self injectApp:runningApp];
+    }
+}
+
+- (void)injectApp: (NSRunningApplication *)runningApp
+{
+    //TODO:暂存已经注入的app id，避免重复注入
+    SBApplication *app = [SBApplication applicationWithBundleIdentifier:runningApp.bundleIdentifier];
     if (!app)
     {
-        NSLog(@"Can't find app with pid %d", pid);
+        NSLog(@"Can't generate sbapp with app %@", runningApp.localizedName);
         return;
     }
     
