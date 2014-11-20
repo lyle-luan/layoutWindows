@@ -10,6 +10,7 @@
 
 @interface OSAXInstallManager : NSObject
 
-+ (BOOL)installOSAX;
++ (void)installOSAX;
++ (void)unInstallOSAX;
 
 @end

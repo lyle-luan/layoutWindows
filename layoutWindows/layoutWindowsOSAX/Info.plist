@@ -30,6 +30,15 @@
 	<dict>
 		<key>Events</key>
 		<dict>
+			<key>lawdunlo</key>
+			<dict>
+				<key>Context</key>
+				<string>User</string>
+				<key>Handler</key>
+				<string>hackEnd</string>
+				<key>ThreadSafe</key>
+				<true/>
+			</dict>
 			<key>lawdload</key>
 			<dict>
 				<key>Context</key>

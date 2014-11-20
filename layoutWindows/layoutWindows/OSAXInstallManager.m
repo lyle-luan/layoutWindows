@@ -8,20 +8,35 @@
 
 #import "OSAXInstallManager.h"
 
+static NSString * const scriptingAdditions  = @"ScriptingAdditions";
+static NSString * const osaxFileName        = @"layoutWindowsOSAX.osax";
+
 @implementation OSAXInstallManager
 
-+ (BOOL)installOSAX
++ (void)unInstallOSAX
 {
-    static NSString * const scriptingAdditions  = @"ScriptingAdditions";
-    static NSString * const osaxFileName        = @"layoutWindowsOSAX.osax";
+    BOOL isDirectory = NO;
     
+    NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,  NSUserDomainMask, YES);
+    NSString *userLibraryPath = searchPaths.firstObject;
+    NSString *scriptingAdditionsPath = [userLibraryPath stringByAppendingPathComponent:scriptingAdditions];
+    NSString *osaxLinkedPath = [scriptingAdditionsPath stringByAppendingPathComponent:osaxFileName];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if ((YES==[fileManager fileExistsAtPath:scriptingAdditionsPath isDirectory:&isDirectory]) && isDirectory)
+    {
+        [fileManager removeItemAtPath:osaxLinkedPath error:nil];
+    }
+}
+
++ (void)installOSAX
+{
     NSError *error = nil;
     BOOL isDirectory = NO;
     
     NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,  NSUserDomainMask, YES);
-    
     NSString *userLibraryPath = searchPaths.firstObject;
-    
     NSString *scriptingAdditionsPath = [userLibraryPath stringByAppendingPathComponent:scriptingAdditions];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -30,14 +45,14 @@
     {
         if (isDirectory == NO)
         {
-            return NO;
+            return;
         }
     }
     else
     {
         if (NO == [fileManager createDirectoryAtPath:scriptingAdditionsPath withIntermediateDirectories:YES attributes:nil error:&error])
         {
-            return NO;
+            return;
         }
     }
     
@@ -47,7 +62,7 @@
     
     if (NO == [fileManager fileExistsAtPath:osaxPath isDirectory:&isDirectory] && isDirectory)
     {
-        return NO;
+        return;
     }
     else
     {
@@ -56,29 +71,28 @@
         id fileSystemOfLinkedOSAX = [[fileManager attributesOfItemAtPath:scriptingAdditionsPath error:&error] objectForKey:NSFileSystemNumber];
         if (error)
         {
-            return NO;
+            return;
         }
         id fileSystemOfOSAX = [[fileManager attributesOfItemAtPath:osaxPath error:&error] objectForKey:NSFileSystemNumber];
         if (error)
         {
-            return NO;
+            return;
         }
         
         if ([fileSystemOfLinkedOSAX isEqual:fileSystemOfOSAX])
         {
             if (NO == [fileManager linkItemAtPath:osaxPath toPath:osaxLinkedPath error:&error])
             {
-                return NO;
+                return;
             }
         }
         else
         {
             if ( NO == [fileManager copyItemAtPath:osaxPath toPath:osaxLinkedPath error:&error])
             {
-                return NO;
+                return;
             }
         }
-        return YES;
     }
 }
 

@@ -10,9 +10,11 @@
 #import <AppKit/AppKit.h>
 #import <ScriptingBridge/ScriptingBridge.h>
 #import <Carbon/Carbon.h>
+#import "OSAXInstallManager.h"
 
 static NSString * const runningApplicationsPropertyOfNSWorkspace = @"runningApplications";
 static NSString * const isFinishedLaunchingPropertyOfNSRunningApplication = @"isFinishedLaunching";
+static NSMutableSet *didInjectApps = nil;
 
 @implementation ScriptingAdditionsManager
 
@@ -24,6 +26,8 @@ static NSString * const isFinishedLaunchingPropertyOfNSRunningApplication = @"is
 - (void)offScriptingAdditions
 {
     [[NSWorkspace sharedWorkspace] removeObserver:self forKeyPath:runningApplicationsPropertyOfNSWorkspace];
+    [self stopInjection];
+    [OSAXInstallManager unInstallOSAX];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -62,7 +66,6 @@ static NSString * const isFinishedLaunchingPropertyOfNSRunningApplication = @"is
 
 - (void)injectApp: (NSRunningApplication *)runningApp
 {
-    static NSMutableSet *didInjectApps = nil;
     if (didInjectApps == nil)
     {
         didInjectApps = [NSMutableSet setWithCapacity:0];
@@ -70,6 +73,7 @@ static NSString * const isFinishedLaunchingPropertyOfNSRunningApplication = @"is
     
     if ([didInjectApps containsObject:runningApp.bundleIdentifier] == NO)
     {
+        NSLog(@"inject %@", runningApp.localizedName);
         [didInjectApps addObject:runningApp.bundleIdentifier];
         SBApplication *app = [SBApplication applicationWithBundleIdentifier:runningApp.bundleIdentifier];
         if (!app)
@@ -84,6 +88,28 @@ static NSString * const isFinishedLaunchingPropertyOfNSRunningApplication = @"is
         [app setSendMode:kAENoReply | kAENeverInteract | kAEDontRecord];
         [app sendEvent:'lawd' id:'load' parameters:0];
     }
+}
+
+- (void)stopInjection
+{
+    for (NSString *runningAppBundleIdentifier in didInjectApps)
+    {
+        SBApplication *app = [SBApplication applicationWithBundleIdentifier:runningAppBundleIdentifier];
+        if (!app)
+        {
+            NSLog(@"Can't generate sbapp with app %@", runningAppBundleIdentifier);
+            return;
+        }
+        
+        [app setSendMode:kAENoReply | kAENeverInteract | kAEDontRecord];
+        [app sendEvent:kASAppleScriptSuite id:kGetAEUT parameters:0];
+        
+        [app setSendMode:kAENoReply | kAENeverInteract | kAEDontRecord];
+        [app sendEvent:'lawd' id:'unlo' parameters:0];
+    }
+    
+    [didInjectApps removeAllObjects];
+    didInjectApps = nil;
 }
 
 @end
