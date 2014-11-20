@@ -62,19 +62,28 @@ static NSString * const isFinishedLaunchingPropertyOfNSRunningApplication = @"is
 
 - (void)injectApp: (NSRunningApplication *)runningApp
 {
-    //TODO:暂存已经注入的app id，避免重复注入
-    SBApplication *app = [SBApplication applicationWithBundleIdentifier:runningApp.bundleIdentifier];
-    if (!app)
+    static NSMutableSet *didInjectApps = nil;
+    if (didInjectApps == nil)
     {
-        NSLog(@"Can't generate sbapp with app %@", runningApp.localizedName);
-        return;
+        didInjectApps = [NSMutableSet setWithCapacity:0];
     }
     
-    [app setSendMode:kAENoReply | kAENeverInteract | kAEDontRecord];
-    [app sendEvent:kASAppleScriptSuite id:kGetAEUT parameters:0];
-    
-    [app setSendMode:kAENoReply | kAENeverInteract | kAEDontRecord];
-    [app sendEvent:'lawd' id:'load' parameters:0];
+    if ([didInjectApps containsObject:runningApp.bundleIdentifier] == NO)
+    {
+        [didInjectApps addObject:runningApp.bundleIdentifier];
+        SBApplication *app = [SBApplication applicationWithBundleIdentifier:runningApp.bundleIdentifier];
+        if (!app)
+        {
+            NSLog(@"Can't generate sbapp with app %@", runningApp.localizedName);
+            return;
+        }
+        
+        [app setSendMode:kAENoReply | kAENeverInteract | kAEDontRecord];
+        [app sendEvent:kASAppleScriptSuite id:kGetAEUT parameters:0];
+        
+        [app setSendMode:kAENoReply | kAENeverInteract | kAEDontRecord];
+        [app sendEvent:'lawd' id:'load' parameters:0];
+    }
 }
 
 @end
